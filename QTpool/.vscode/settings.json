@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "qsqlerror": "cpp",
+        "qdatetime": "cpp",
+        "qtcpsocket": "cpp",
+        "qtcpserver": "cpp",
+        "qapplication": "cpp",
+        "qmainwindow": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
