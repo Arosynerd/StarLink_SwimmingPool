@@ -3,10 +3,16 @@
 #include <QLabel>
 #include <QList>
 #include <QDebug>
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    //创建蜂鸣器对象
+    Beep = new beep(this);
+    //
+    Sht31 = new SHT31(this);
     ui->setupUi(this);
     //设置标题
     this->setWindowTitle("星闪泳池监控系统");
@@ -26,6 +32,8 @@ MainWindow::MainWindow(QWidget *parent)
         //设置文字大小
       ui->humi_label->setFont(QFont("Arial", 20, QFont::Bold));
       ui->temp_label->setFont(QFont("Arial", 20, QFont::Bold));
+      ui->humivalue_label->setFont(QFont("Arial", 20, QFont::Bold));
+      ui->tempvalue_label->setFont(QFont("Arial", 20, QFont::Bold));
     //this->setStyleSheet("background-image: url(file:///f:/Users/17444/Documents/qt/QTpool/swim.png);");
     timerId = startTimer(1000); // 启动定时器，每隔1000毫秒触发一次定时器事件
     // 获取所有label控件并设置内容为“null”
@@ -56,9 +64,28 @@ void MainWindow::timerEvent(QTimerEvent *event) {
 
     // 更新索引，循环移动
     currentIndex = (currentIndex + 1) % labels.size();
+
+
+    //test get humi and temp
+    static float humi = 15.00,temp = 36.00;
+    if(Sht31->sht31_read_temp_humidity(&temp,&humi) == 0){
+
+    }
+    ui->tempvalue_label->setText(QString::number(temp,'f',2));
+    ui->humivalue_label->setText(QString::number(humi,'f',2));
 }
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+
+void MainWindow::on_turnon_clicked()
+{
+    Beep->Beep_On();
+}
+
+void MainWindow::on_turnoff_clicked()
+{
+    Beep->Beep_Off();
+}

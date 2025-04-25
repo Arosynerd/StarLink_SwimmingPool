@@ -1,18 +1,13 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "F:/Qt/Qt5.14.2/5.14.2/mingw73_64/include/**"
+                "/home/arosy/Qt5.12.10/5.12.10/gcc_64/include/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "compilerPath": "F:\\Qt\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe",
-            "intelliSenseMode": "windows-gcc-x64"
+            "defines": [],
+            "compilerPath": "/usr/bin/g++"
         }
     ],
     "version": 4

@@ -16,11 +16,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    beep.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    sht31.cpp
 
 HEADERS += \
-    mainwindow.h
+    beep.h \
+    mainwindow.h \
+    sht31.h
 
 FORMS += \
     mainwindow.ui

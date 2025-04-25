@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 
+#include "beep.h"
+#include "sht31.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -21,6 +23,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     void timerEvent(QTimerEvent *event);
     ~MainWindow();
+
+    beep *Beep;
+    SHT31 *Sht31;
+
+private slots:
+    void on_turnon_clicked();
+
+    void on_turnoff_clicked();
 
 private:
     Ui::MainWindow *ui;

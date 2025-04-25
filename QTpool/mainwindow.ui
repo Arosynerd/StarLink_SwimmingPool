@@ -163,7 +163,7 @@
      <string>TextLabel</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -179,10 +179,7 @@
      <item>
       <widget class="QLabel" name="temp_label">
        <property name="text">
-        <string>今日温度</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::MarkdownText</enum>
+        <string>temp</string>
        </property>
       </widget>
      </item>
@@ -195,7 +192,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -211,7 +208,7 @@
      <item>
       <widget class="QLabel" name="humi_label">
        <property name="text">
-        <string>今日湿度</string>
+        <string>humi</string>
        </property>
       </widget>
      </item>
@@ -224,6 +221,32 @@
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="turnon">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>40</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开蜂鸣</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="turnoff">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>40</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>关蜂鸣</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -231,7 +254,7 @@
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>23</height>
+     <height>28</height>
     </rect>
    </property>
   </widget>
